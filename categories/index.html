@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next pisces" lang="zh-Hans">
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,6 +22,7 @@
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -112,10 +115,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
+    version: '5.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: ,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -148,12 +152,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -200,7 +198,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/ || home" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -210,7 +208,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/ || tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -220,7 +218,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/ || th" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -230,7 +228,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/ || archive" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -317,19 +315,18 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="车老师" />
-          <p class="site-author-name" itemprop="name">车老师</p>
-           
-              <p class="site-description motion-element" itemprop="description">信用卡、酒店积分、航空里程的使用</p>
           
+            <p class="site-author-name" itemprop="name">车老师</p>
+            <p class="site-description motion-element" itemprop="description">信用卡、酒店积分、航空里程的使用</p>
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives/ || archive">
+            
+              <a href="/archives/">
+            
                 <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -348,25 +345,15 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/cheche0723 || weibo" target="_blank" title="微博">
+                <a href="http://weibo.com/cheche0723" target="_blank" title="微博">
                   
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      微博
-                    
-                </a>
+                    <i class="fa fa-fw fa-weibo"></i>微博</a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="http://www.zhihu.com/people/chevsky" target="_blank" title="知乎">
                   
-                    <i class="fa fa-fw fa-zhihu"></i>
-                  
-                    
-                      知乎
-                    
-                </a>
+                    <i class="fa fa-fw fa-globe"></i>知乎</a>
               </span>
             
           
@@ -405,11 +392,19 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">车老师</span>
+
+  
 </div>
 
 
 
         
+
+
+
+
+
+
 
         
       </div>
@@ -491,9 +486,9 @@
 
 
 
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
   
 
@@ -525,6 +520,8 @@
 
 
   
+
+
 
 
 
